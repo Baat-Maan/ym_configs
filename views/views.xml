@@ -1,0 +1,135 @@
+<odoo>
+
+    <record id="res_config_settings_view_form_ym_configs" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.crm.ym_configs</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Youngman Configs" string="Youngman Configs" data-key="ym_configs">
+
+                    <h2>Beta Endpoint Config</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_setting_left_pane">
+                            <label for="save_jobsite"/>
+                            <field name="save_jobsite"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="jobsite_endpoint"/>
+                            <field name="jobsite_endpoint"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="save_customer"/>
+                            <field name="save_customer"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="customer_endpoint"/>
+                            <field name="customer_endpoint"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="save_customer_branch"/>
+                            <field name="save_customer_branch"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="customer_branch_endpoint"/>
+                            <field name="customer_branch_endpoint"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="save_quotation"/>
+                            <field name="save_quotation"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="quotation_endpoint"/>
+                            <field name="quotation_endpoint"/>
+                        </div>
+                    </div>
+
+
+                    <h2>Youngman Team Head Contact</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_setting_left_pane">
+                            <label for="sales_head_contact"/>
+                            <field name="sales_head_contact"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="accounts_head_contact"/>
+                            <field name="accounts_head_contact"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="ops_head_contact"/>
+                            <field name="ops_head_contact"/>
+                        </div>
+                    </div>
+
+
+                    <h2>Google Maps Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_setting_left_pane">
+                            <label for="google_maps_api_key"/>
+                            <field name="google_maps_api_key"/>
+                        </div>
+                    </div>
+
+                    <h2>Rapid SMS Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_setting_left_pane">
+                            <label for="rapid_sms_api_key"/>
+                            <field name="rapid_sms_api_key"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="rapid_sms_url"/>
+                            <field name="rapid_sms_url"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="rapid_sms_sender"/>
+                            <field name="rapid_sms_sender"/>
+                        </div>
+                    </div>
+
+
+
+                    <h2>Sap Management</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_setting_left_pane">
+                            <label for="sap_api_url"/>
+                            <field name="sap_api_url"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="sap_db"/>
+                            <field name="sap_db"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="sap_username"/>
+                            <field name="sap_username"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="sap_password"/>
+                            <field name="sap_password" password="True"/>
+                        </div>
+                        <div class="o_setting_left_pane">
+                            <label for="sap_domain"/>
+                            <field name="sap_domain"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_youngman_configs_settings">
+        <field name="name">Youngman Configs</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form_ym_configs"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'ym_configs'}</field>
+    </record>
+
+
+    <menuitem name="Youngman Configs"
+              id="menu_youngman_configs"
+              parent="crm.crm_menu_config"
+              action="action_youngman_configs_settings"/>
+</odoo>
