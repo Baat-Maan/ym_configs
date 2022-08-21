@@ -20,6 +20,10 @@
                             <field name="jobsite_endpoint"/>
                         </div>
                         <div class="o_setting_left_pane">
+                            <label for="nearest_godown_endpoint"/>
+                            <field name="nearest_godown_endpoint"/>
+                        </div>
+                        <div class="o_setting_left_pane">
                             <label for="save_customer"/>
                             <field name="save_customer"/>
                         </div>

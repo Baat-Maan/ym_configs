@@ -9,6 +9,8 @@ class ResConfigSettings(models.TransientModel):
     save_jobsite = fields.Boolean(string='Save Jobsite To Beta', config_parameter='ym_configs.save_jobsite')
     jobsite_endpoint = fields.Char(string='Jobsite Beta Endpoint', config_parameter='ym_configs.jobsite_endpoint')
 
+    nearest_godown_endpoint = fields.Char(string='Nearest Godown Endpoint', config_parameter='ym_configs.nearest_godown_endpoint')
+
     save_customer = fields.Boolean(string='Save Customer To Beta', config_parameter='ym_configs.save_customer')
     customer_endpoint = fields.Char(string='Customer Beta Endpoint', config_parameter='ym_configs.customer_endpoint')
 
